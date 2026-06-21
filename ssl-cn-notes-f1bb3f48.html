@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>雷速 · 站点说明与产品介绍</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
+      background-color: #f7f9fb;
+      color: #1f2a3a;
+      line-height: 1.7;
+      letter-spacing: 0.01em;
+    }
+
+    /* 深色头图 — 克制的科技感 */
+    .hero {
+      background: linear-gradient(145deg, #0b1a2e 0%, #142b44 100%);
+      padding: 4rem 2rem 3.5rem;
+      text-align: center;
+      color: #e6edf5;
+      border-bottom: 1px solid rgba(255,255,255,0.06);
+    }
+
+    .hero h1 {
+      font-size: 2.6rem;
+      font-weight: 500;
+      letter-spacing: 2px;
+      margin-bottom: 0.5rem;
+      color: #ffffff;
+    }
+
+    .hero .sub {
+      font-size: 1.05rem;
+      opacity: 0.78;
+      max-width: 620px;
+      margin: 0.5rem auto 0;
+      line-height: 1.6;
+    }
+
+    .hero .sub a {
+      color: #b8d6f0;
+      text-decoration: underline;
+      text-underline-offset: 3px;
+    }
+
+    .hero .sub a:hover {
+      color: #d6eaff;
+      text-decoration: underline;
+    }
+
+    /* 浅色正文区 */
+    .container {
+      max-width: 1020px;
+      margin: 0 auto;
+      padding: 2.8rem 2rem 4rem;
+    }
+
+    /* 卡片风格：圆角轻微，背景白，阴影缥缈 */
+    .card {
+      background: #ffffff;
+      border-radius: 20px;
+      padding: 2rem 2.2rem;
+      margin-bottom: 2.2rem;
+      box-shadow: 0 6px 18px rgba(0, 0, 0, 0.03), 0 2px 6px rgba(0, 20, 40, 0.03);
+      transition: box-shadow 0.2s;
+    }
+
+    .card:hover {
+      box-shadow: 0 12px 28px rgba(0, 0, 0, 0.05);
+    }
+
+    .card h2 {
+      font-size: 1.5rem;
+      font-weight: 520;
+      margin-bottom: 0.9rem;
+      padding-left: 0.2rem;
+      border-left: 5px solid #2b6f9c;
+      padding-left: 0.9rem;
+      color: #0f293f;
+    }
+
+    .card p {
+      margin-bottom: 0.85rem;
+    }
+
+    .card p:last-child {
+      margin-bottom: 0;
+    }
+
+    /* 强调色用于链接 */
+    a {
+      color: #226799;
+      text-decoration: none;
+      font-weight: 460;
+      border-bottom: 1px solid transparent;
+      transition: border-color 0.15s, color 0.15s;
+    }
+
+    a:hover {
+      color: #104b73;
+      border-bottom: 1px solid #226799;
+    }
+
+    /* 亮点网格 */
+    .feature-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 1.5rem;
+      margin-top: 0.6rem;
+    }
+
+    .feature-item {
+      background: #f2f6fa;
+      border-radius: 14px;
+      padding: 1.4rem 1.2rem;
+      transition: transform 0.1s ease;
+    }
+
+    .feature-item strong {
+      display: block;
+      font-weight: 550;
+      font-size: 1.1rem;
+      margin-bottom: 0.4rem;
+      color: #103a52;
+    }
+
+    .feature-item span {
+      color: #2f4052;
+      font-size: 0.94rem;
+    }
+
+    /* 使用建议 + FAQ 简洁排列 */
+    .tip-list {
+      list-style: none;
+      padding-left: 0;
+    }
+
+    .tip-list li {
+      margin-bottom: 0.75rem;
+      display: flex;
+      gap: 0.6rem;
+      align-items: baseline;
+    }
+
+    .tip-list li::before {
+      content: "▹";
+      color: #2b6f9c;
+      font-size: 1.1rem;
+      flex-shrink: 0;
+    }
+
+    .faq-item {
+      margin-bottom: 1.3rem;
+    }
+
+    .faq-item .q {
+      font-weight: 530;
+      color: #0f2e44;
+      margin-bottom: 0.15rem;
+    }
+
+    .faq-item .a {
+      font-size: 0.95rem;
+      color: #405467;
+      padding-left: 0.2rem;
+    }
+
+    hr {
+      border: none;
+      border-top: 1px solid #dce4ec;
+      margin: 1.8rem 0 2rem;
+    }
+
+    .footer-note {
+      font-size: 0.9rem;
+      color: #5b6f82;
+      border-top: 1px solid #e2e9f0;
+      padding-top: 2rem;
+      margin-top: 1.5rem;
+      text-align: center;
+    }
+
+    /* 响应式 */
+    @media (max-width: 660px) {
+      .hero {
+        padding: 3rem 1.5rem 2.5rem;
+      }
+      .hero h1 {
+        font-size: 2rem;
+      }
+      .container {
+        padding: 1.8rem 1.2rem 3rem;
+      }
+      .card {
+        padding: 1.5rem 1.2rem;
+      }
+      .feature-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<header class="hero">
+  <h1>雷速 · 可信传输路径</h1>
+  <div class="sub">
+    面向有稳定、安全访问需求的网络使用者 · <a href="https://ssl-cn-rayspeed.com">雷速</a> 提供基于加密传输的基础设施接入能力
+  </div>
+</header>
+
+<main class="container">
+
+  <!-- 站点介绍 / 摘要 -->
+  <section class="card">
+    <h2>关于雷速</h2>
+    <p>
+      <a href="https://ssl-cn-rayspeed.com">雷速</a> 是一个面向网络连通性优化的服务站点，主要提供基于 TLS / 加密隧道的接入方案。
+      其核心思路是通过架设可靠的中转节点，帮助用户在特定网络环境下获得更稳定的数据传输体验。
+      站点从技术层面强调传输层的安全与效率，不涉及任何内容代理或数据篡改，属于纯粹的网络链路优化服务。
+    </p>
+    <p>
+      从可信角度来看，雷速提供了清晰的节点信息与连接指引，用户在理解技术原理的基础上可自行评估适用性。
+      需要说明的是，任何网络服务的效果均受所在地区、运营商、本地策略等客观因素影响，保持理性预期是合理使用的前提。
+    </p>
+  </section>
+
+  <!-- 亮点 / 特性卡片 -->
+  <section class="card">
+    <h2>主要特点</h2>
+    <div class="feature-grid">
+      <div class="feature-item">
+        <strong>加密传输</strong>
+        <span>采用标准 SSL/TLS 协议，避免中间阶段的数据明文暴露，提升传输过程的私密性。</span>
+      </div>
+      <div class="feature-item">
+        <strong>节点冗余</strong>
+        <span>多区域节点部署，单一节点异常时可切换备用路径，减少因单点故障造成的连接中断。</span>
+      </div>
+      <div class="feature-item">
+        <strong>配置灵活</strong>
+        <span>支持多种客户端与协议适配，用户可根据自身场景选择合适的接入方式，降低使用门槛。</span>
+      </div>
+      <div class="feature-item">
+        <strong>协议透明</strong>
+        <span>不修改应用层数据，仅优化底层路由与握手，对上层应用保持兼容与透明。</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- 使用场景 + 建议 -->
+  <section class="card">
+    <h2>推荐使用场景</h2>
+    <ul class="tip-list">
+      <li><strong>跨境协作场景：</strong> 需要稳定连接海外 API、代码仓库或云资源的研发与运维团队，可通过 <a href="https://ssl-cn-rayspeed.com">雷速</a> 降低延迟波动。</li>
+      <li><strong>实时数据同步：</strong> 对丢包敏感的业务（如消息推送、金融行情、VoIP），可借助优化链路减少重传。</li>
+      <li><strong>日常安全浏览：</strong> 在公共 Wi-Fi 或不可信任网络环境下，利用加密隧道保护浏览器与服务器之间的流量。</li>
+      <li><strong>技术评估与测试：</strong> 网络研究人员或质量评测人员可通过不同节点对比验证路由优化效果。</li>
+    </ul>
+    <p style="margin-top: 1rem; font-size: 0.95rem; color: #405467;">
+      使用前建议先阅读站内指引，确认客户端兼容性与本地防火墙策略。初次配置可选用默认推荐参数，逐步调整至符合自身网络状况。
+    </p>
+  </section>
+
+  <!-- FAQ 摘要 —— 克制的知识型口吻 -->
+  <section class="card">
+    <h2>常见理解点</h2>
+    <div class="faq-item">
+      <div class="q">Q：雷速是否会对流量内容进行记录或审查？</div>
+      <div class="a">A：根据站点描述，服务仅涉及数据传输路径的优化，不应解析或存储应用层有效载荷。用户仍应对自身传输内容负全部责任。</div>
+    </div>
+    <div class="faq-item">
+      <div class="q">Q：为什么在不同地区使用效果有差异？</div>
+      <div class="a">A：互联网路由本身受物理距离、运营商互联、国际出口带宽等因素影响，雷速节点可在一定程度上缓解，但无法消除所有地理限制。</div>
+    </div>
+    <div class="faq-item">
+      <div class="q">Q：配置过程中是否需要特殊权限？</div>
+      <div class="a">A：通常不需要 root 或管理员权限，但部分系统代理设置可能需要网络权限。建议按照官方文档逐项操作，避免重复配置冲突。</div>
+    </div>
+    <p style="margin-top: 0.8rem; font-size: 0.93rem;">
+      更多技术细节与 FAQ 可参考 <a href="https://ssl-cn-rayspeed.com">雷速</a> 站内的帮助页面。网络环境多变，请以实际体验为准。
+    </p>
+  </section>
+
+  <hr />
+
+  <!-- 可信但克制的访问说明 -->
+  <div class="footer-note">
+    <p style="max-width: 700px; margin: 0 auto 0.5rem;">
+      本页面仅为产品介绍与知识说明，不构成任何形式的担保或承诺。<br>
+      雷速服务的使用应遵守所在地法律法规。请根据自身需求与技术能力合理评估。
+    </p>
+    <p style="margin-top: 0.7rem; opacity: 0.65; font-size: 0.85rem;">
+      站点参考 · 保持客观
+    </p>
+  </div>
+
+</main>
+
+</body>
+</html>
